@@ -33,9 +33,6 @@ This document provides a comprehensive API specification for the Timeline module
       {
         "id": "string",
         "name": "string",
-        "projectId": "string",
-        "releaseDate": "YYYY-MM-DD",
-        "released": boolean
       }
     ],
     "members": [
@@ -50,20 +47,8 @@ This document provides a comprehensive API specification for the Timeline module
       {
         "id": "string",
         "name": "string",
-        "description": "string"
       }
     ],
-    "statusCategories": ["TODO", "IN_PROGRESS", "DONE"],
-    "timeframeOptions": [
-      {
-        "key": "today",
-        "label": "Today"
-      },
-      {
-        "key": "week",
-        "label": "This Week"
-      }
-    ]
   }
 }
 ```

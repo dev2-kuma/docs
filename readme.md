@@ -83,6 +83,7 @@ This document provides a comprehensive API specification for the Timeline module
      "releasedVersions": "number",
      "markers": [
      {
+         "id": "string", // Entity ID for hover functionality
          "date": "YYYY-MM-DD", // duedate
          "type": "release" | "story",
          "name": "string", // "version name" | "story name",

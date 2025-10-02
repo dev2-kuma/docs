@@ -96,53 +96,7 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.3 Get Version Details (Hover)
-**Endpoint:** `GET /spaces/:spaceId/timeline/versions/:entityId/details`
-
-**Description:** Get quick details when hovering over version markers.
-
-**Path Parameters:**
-- `entityId`: Version ID
-
-**Response:**
-```json
-{
-  "data": {
-    "id": "string",
-    "name": "string",
-    "type": "release",
-    "status": "string",
-    "statusProgress": "string",
-    "jiraCode": "string",
-    "dueDate": "YYYY-MM-DD"
-  }
-}
-```
-
-### 1.4 Get Story Details (Hover)
-**Endpoint:** `GET /spaces/:spaceId/timeline/stories/:entityId/details`
-
-**Description:** Get quick details when hovering over story markers.
-
-**Path Parameters:**
-- `entityId`: Story ID
-
-**Response:**
-```json
-{
-  "data": {
-    "id": "string",
-    "name": "string",
-    "type": "story",
-    "status": "string",
-    "statusProgress": "string",
-    "jiraCode": "string",
-    "dueDate": "YYYY-MM-DD"
-  }
-}
-```
-
-### 1.5 Get Version Workload Details (Hover Progress Bar)
+### 1.3 Get Version Workload Details (Hover Progress Bar)
 **Endpoint:** `GET /spaces/:spaceId/timeline/versions/:entityId/workload`
 
 **Description:** Get detailed workload information when hovering over version progress bars.
@@ -167,7 +121,7 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.6 Get Story Workload Details (Hover Progress Bar)
+### 1.4 Get Story Workload Details (Hover Progress Bar)
 **Endpoint:** `GET /spaces/:spaceId/timeline/stories/:entityId/workload`
 
 **Description:** Get detailed workload information when hovering over story progress bars.
@@ -192,7 +146,7 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.7 Get Project Versions (Expand Project)
+### 1.5 Get Project Versions (Expand Project)
 **Endpoint:** `GET /spaces/:spaceId/timeline/projects/:projectId/versions`
 
 **Description:** Get list of versions when expanding a project.
@@ -228,7 +182,7 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.8 Get Version Stories (Expand Version)
+### 1.6 Get Version Stories (Expand Version)
 **Endpoint:** `GET /spaces/:spaceId/timeline/versions/:versionId/stories`
 
 **Description:** Get list of stories when expanding a version.

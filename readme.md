@@ -89,7 +89,7 @@ This document provides a comprehensive API specification for the Timeline module
          "name": "string", // "version name" | "story name",
          "jiraCode": "string",
          "status": "string", // Original status from entity
-         "statusProgress": "string", // Calculated progress status
+         "progressStatus": "string", // Calculated progress status
      }
      // ...
      ]
@@ -167,7 +167,7 @@ This document provides a comprehensive API specification for the Timeline module
       "name": "string",
       "type": "release",
       "status": "string",
-      "statusProgress": "string",
+      "progressStatus": "string",
       "progress": "number (0-100)",
       "startDate": "YYYY-MM-DD",
       "dueDate": "YYYY-MM-DD"
@@ -203,7 +203,7 @@ This document provides a comprehensive API specification for the Timeline module
       "name": "string",
       "type": "story",
       "status": "string",
-      "statusProgress": "string",
+      "progressStatus": "string",
       "progress": "number (0-100)",
       "startDate": "YYYY-MM-DD",
       "dueDate": "YYYY-MM-DD",
@@ -277,7 +277,7 @@ This document provides a comprehensive API specification for the Timeline module
       "id": "string",
       "name": "string",
       "status": "string", 
-      "statusProgress": "string", 
+      "progressStatus": "string", 
       "note": "string",
       "startDate": "YYYY-MM-DD",
       "dueDate": "YYYY-MM-DD",
@@ -383,7 +383,7 @@ This document provides a comprehensive API specification for the Timeline module
       "id": "string",
       "title": "string",
       "status": "string",
-      "statusProgress": "string",
+      "progressStatus": "string",
       "releaseVersion": "string", // version nó thuộc về
       "startDate": "YYYY-MM-DD",
       "dueDate": "YYYY-MM-DD"
@@ -550,7 +550,7 @@ All endpoints return standard HTTP status codes and error responses:
   - `RELEASED` - Version has been released
   - `UNRELEASED` - Version is not yet released
 
-### StatusProgress (Calculated Progress Status)
+### ProgressStatus (Calculated Progress Status)
 - **Story**: Progress-based status:
   - `TODO` - Not started
   - `IN_PROGRESS` - In progress and on track

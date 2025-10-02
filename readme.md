@@ -95,13 +95,13 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.3 Get Version/Story Details (Hover)
-**Endpoint:** `GET /spaces/:spaceId/timeline/entities/:entityId/details`
+### 1.3 Get Version Details (Hover)
+**Endpoint:** `GET /spaces/:spaceId/timeline/versions/:entityId/details`
 
-**Description:** Get quick details when hovering over timeline markers.
+**Description:** Get quick details when hovering over version markers.
 
 **Path Parameters:**
-- `entityId`: Version ID or Story ID
+- `entityId`: Version ID
 
 **Response:**
 ```json
@@ -109,7 +109,7 @@ This document provides a comprehensive API specification for the Timeline module
   "data": {
     "id": "string",
     "name": "string",
-    "type": "release" | "story",
+    "type": "release",
     "status": "string",
     "statusProgress": "string",
     "jiraCode": "string",
@@ -118,13 +118,13 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.4 Get Workload Details (Hover Progress Bar)
-**Endpoint:** `GET /spaces/:spaceId/timeline/entities/:entityId/workload`
+### 1.4 Get Story Details (Hover)
+**Endpoint:** `GET /spaces/:spaceId/timeline/stories/:entityId/details`
 
-**Description:** Get detailed workload information when hovering over progress bars.
+**Description:** Get quick details when hovering over story markers.
 
 **Path Parameters:**
-- `entityId`: Version ID or Story ID
+- `entityId`: Story ID
 
 **Response:**
 ```json
@@ -132,7 +132,30 @@ This document provides a comprehensive API specification for the Timeline module
   "data": {
     "id": "string",
     "name": "string",
-    "type": "release" | "story",
+    "type": "story",
+    "status": "string",
+    "statusProgress": "string",
+    "jiraCode": "string",
+    "dueDate": "YYYY-MM-DD"
+  }
+}
+```
+
+### 1.5 Get Version Workload Details (Hover Progress Bar)
+**Endpoint:** `GET /spaces/:spaceId/timeline/versions/:entityId/workload`
+
+**Description:** Get detailed workload information when hovering over version progress bars.
+
+**Path Parameters:**
+- `entityId`: Version ID
+
+**Response:**
+```json
+{
+  "data": {
+    "id": "string",
+    "name": "string",
+    "type": "release",
     "workload": {
       "total": "number (hours)",
       "burned": "number (hours)",
@@ -143,7 +166,32 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.5 Get Project Versions (Expand Project)
+### 1.6 Get Story Workload Details (Hover Progress Bar)
+**Endpoint:** `GET /spaces/:spaceId/timeline/stories/:entityId/workload`
+
+**Description:** Get detailed workload information when hovering over story progress bars.
+
+**Path Parameters:**
+- `entityId`: Story ID
+
+**Response:**
+```json
+{
+  "data": {
+    "id": "string",
+    "name": "string",
+    "type": "story",
+    "workload": {
+      "total": "number (hours)",
+      "burned": "number (hours)",
+      "logged": "number (hours)",
+      "remaining": "number (hours)"
+    }
+  }
+}
+```
+
+### 1.7 Get Project Versions (Expand Project)
 **Endpoint:** `GET /spaces/:spaceId/timeline/projects/:projectId/versions`
 
 **Description:** Get list of versions when expanding a project.
@@ -179,7 +227,7 @@ This document provides a comprehensive API specification for the Timeline module
 }
 ```
 
-### 1.6 Get Version Stories (Expand Version)
+### 1.8 Get Version Stories (Expand Version)
 **Endpoint:** `GET /spaces/:spaceId/timeline/versions/:versionId/stories`
 
 **Description:** Get list of stories when expanding a version.

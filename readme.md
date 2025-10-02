@@ -69,6 +69,8 @@ This document provides a comprehensive API specification for the Timeline module
 - `overdue`: true/false (unreleased versions and stories not in completed statuses)
 - `dueToday`, `dueThisWeek`, `dueNextWeek`: true/false flags
 - `showReleased`: true/false (include released versions)
+- `page`: Page number (default: 1) (OPTIONAL)
+- `limit`: Page size (default: 10) (OPTIONAL)
 
 **Response:**
 ```json
@@ -155,6 +157,16 @@ This document provides a comprehensive API specification for the Timeline module
 - `projectId`: Project ID
 
 **Query Parameters:**
+- `projectIds`: Comma-separated project IDs
+- `portfolioIds`: Comma-separated portfolio IDs
+- `search`: Text search across project names and IDs
+- `userIds`: Comma-separated assignee IDs
+- `teamIds`: Comma-separated team IDs
+- `versionIds`: Comma-separated version IDs
+- `from`, `to`: Date range filter (YYYY-MM-DD)
+- `overdue`: true/false (unreleased versions and stories not in completed statuses)
+- `dueToday`, `dueThisWeek`, `dueNextWeek`: true/false flags
+- `showReleased`: true/false (include released versions)
 - `page`: Page number (default: 1) (OPTIONAL)
 - `limit`: Page size (default: 10) (OPTIONAL)
 
@@ -191,8 +203,19 @@ This document provides a comprehensive API specification for the Timeline module
 - `versionId`: Version ID
 
 **Query Parameters:**
+- `projectIds`: Comma-separated project IDs
+- `portfolioIds`: Comma-separated portfolio IDs
+- `search`: Text search across project names and IDs
+- `userIds`: Comma-separated assignee IDs
+- `teamIds`: Comma-separated team IDs
+- `versionIds`: Comma-separated version IDs
+- `from`, `to`: Date range filter (YYYY-MM-DD)
+- `overdue`: true/false (unreleased versions and stories not in completed statuses)
+- `dueToday`, `dueThisWeek`, `dueNextWeek`: true/false flags
+- `showReleased`: true/false (include released versions)
 - `page`: Page number (default: 1) (OPTIONAL)
 - `limit`: Page size (default: 10) (OPTIONAL)
+
 
 **Response:**
 ```json

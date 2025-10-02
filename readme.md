@@ -549,6 +549,7 @@ All endpoints return standard HTTP status codes and error responses:
 - **Version**: Uses release status:
   - `RELEASED` - Version has been released
   - `UNRELEASED` - Version is not yet released
+  - `OVERDUE` - Version is unreleased but past its release date
 
 ### ProgressStatus (Calculated Progress Status)
 - **Story**: Progress-based status:

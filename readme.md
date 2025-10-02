@@ -88,6 +88,8 @@ This document provides a comprehensive API specification for the Timeline module
          "type": "release" | "story",
          "name": "string", // "version name" | "story name",
          "jiraCode": "string",
+         "status": "string", // Original status from entity
+         "statusProgress": "string", // Calculated progress status
      }
      // ...
      ]

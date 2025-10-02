@@ -109,7 +109,7 @@ This document provides a comprehensive API specification for the Timeline module
   "data": {
     "id": "string",
     "name": "string",
-    "type": "version" | "story",
+    "type": "release" | "story",
     "status": "string",
     "statusProgress": "string",
     "jiraCode": "string",
@@ -132,7 +132,7 @@ This document provides a comprehensive API specification for the Timeline module
   "data": {
     "id": "string",
     "name": "string",
-    "type": "version" | "story",
+    "type": "release" | "story",
     "workload": {
       "total": "number (hours)",
       "burned": "number (hours)",
@@ -554,7 +554,7 @@ All endpoints return standard HTTP status codes and error responses:
   - `IN_PROGRESS_OVERDUE` - In progress but overdue
   - `DONE` - Completed
 - **Version**: Progress-based status:
-  - `released` - Version is released
-  - `on-track` - On track to meet deadline
-  - `at-risk` - At risk of missing deadline
-  - `off-track` - Off track, likely to miss deadline
+  - `RELEASED` - Version is released
+  - `ON_TRACK` - On track to meet deadline
+  - `AT_RISK` - At risk of missing deadline
+  - `OFF_TRACK` - Off track, likely to miss deadline

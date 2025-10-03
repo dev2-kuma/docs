@@ -75,26 +75,35 @@ This document provides a comprehensive API specification for the Timeline module
 **Response:**
 ```json
 {
-     "id": "string",
-     "name": "string",
-     "code": "string",
-     "type": "project",
-     "progress": "number (0-100)",
-     "startDate": "YYYY-MM-DD",
-     "dueDate": "YYYY-MM-DD",
-     "releasedVersions": "number",
-     "markers": [
-     {
-         "id": "string", // Entity ID for hover functionality
-         "date": "YYYY-MM-DD", // duedate
-         "type": "release" | "story",
-         "name": "string", // "version name" | "story name",
-         "jiraCode": "string",
-         "status": "string", // Original status from entity
-         "progressStatus": "string", // Calculated progress status
-     }
-     // ...
-     ]
+   "data":{
+      "id":"string",
+      "name":"string",
+      "code":"string",
+      "type":"project",
+      "progress":"number (0-100)",
+      "startDate":"YYYY-MM-DD",
+      "dueDate":"YYYY-MM-DD",
+      "releasedVersions":"number",
+      "markers":[
+         {
+            "id":"string",
+            "date":"YYYY-MM-DD",
+            "type":"release""|""story",
+            "name":"string",
+            "version name""|""story name",
+            "jiraCode":"string",
+            "status":"string",
+            "progressStatus":"string",
+            
+         }
+      ]
+   },
+   "meta":{
+      "totalItems":"number",
+      "itemCount":"number",
+      "perPage":"number",
+      "page":"number"
+   }
 }
 ```
 

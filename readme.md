@@ -301,7 +301,7 @@ This document provides a comprehensive API specification for the Timeline module
       "name": "string",
       "status": "string", 
       "progressStatus": "string", 
-      "note": "string",
+      "description": "string",
       "startDate": "YYYY-MM-DD",
       "dueDate": "YYYY-MM-DD",
     },
